@@ -1,14 +1,24 @@
-#show ref: it => {
-  let label = it.element
-  it + label
-}
+// #set page(header: context{
+//   let elems = query(
+//     selector(heading).after(here()),
+//   )
 
-#set page(header: context{
+//   for elem in elems{
+//     par(ref(elem.label, supplement: (params) => params.body), justify: true)
+
+//   }
+// })
+
+#let table_of_cotent = context{
   let elems = query(
     selector(heading).after(here()),
   )
 
+  let text = "Table of content"
+  text
+
   for elem in elems{
-    ref(elem.label)
+    par(ref(elem.label, supplement: (params) => params.body), justify: true)
+
   }
-})
+}
