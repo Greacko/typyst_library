@@ -7,6 +7,10 @@
   )
 }
 
+#let bb(content) = {
+  bluebox(content)
+}
+
 #let redbox(content) = {
   rect(stroke:red+1pt,
   content,
@@ -14,4 +18,8 @@
   fill:color.linear-rgb(87.14%, 86.32%, 86.32%),
   width: 100%, height: auto
   )
+}
+
+#let rb(content) = {
+  redbox(content)
 }
