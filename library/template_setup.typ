@@ -1,3 +1,3 @@
 #set page(numbering: "1")
 
-#outline()
+#outline(indent:true)
